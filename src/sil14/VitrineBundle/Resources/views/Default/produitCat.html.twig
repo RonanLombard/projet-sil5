@@ -1,0 +1,27 @@
+{# src/sil14/VitrineBundle/Resources/views/Default/produitCat.html.twig #}
+{% extends "sil14VitrineBundle::layout.html.twig" %}
+
+{% block content %}  
+    <div>
+        <a href="{{ path('sil14_vitrine_catalogue')}}"><- Retour</a>
+    </div>
+    <div class="container">
+        <h1>Catalogue</h1>
+
+        <div class="row">
+        {% for item in produitCat %}
+            <a href="{{ path('sil14_vitrine_produit', { 'idprod': item.id }) }}">
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="{{ asset('bundles/sil14vitrine/images/'~item.id~'.png') }}" alt="{{ item.name }}">
+                        <div class="caption">
+                            <h3>{{ item.name }}</h3>
+                            <p>{{ item.price }} €</p>
+                        </div>
+                    </div>  
+                </div>
+            </a>
+         {% endfor %}
+        </div>
+    </div>
+{% endblock %}

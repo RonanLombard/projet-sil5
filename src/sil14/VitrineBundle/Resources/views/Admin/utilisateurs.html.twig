@@ -1,0 +1,17 @@
+{% extends "sil14VitrineBundle::layoutAdmin.html.twig" %}
+
+{% block content %}
+<h1>Utilisateurs</h1>  
+    <div class="row">
+    {% for item in categories %}
+        <a href="{{ path('sil14_vitrine_utilisateur', { 'idcat': item.id }) }}">
+            <div class="col-sm-6 col-md-4 vignette">
+                <div class="caption">
+                    <h3>{{ item.name }}</h3>
+                </div>
+                <img src="{{ asset('bundles/sil14vitrine/images/cat'~item.id~'.png') }}" alt="{{ item.name }}">
+            </div>
+        </a>
+     {% endfor %}
+    </div>    
+{% endblock %}

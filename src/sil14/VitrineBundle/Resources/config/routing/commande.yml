@@ -1,0 +1,30 @@
+commande:
+    pattern:  /
+    defaults: { _controller: "sil14VitrineBundle:Commande:index" }
+
+commande_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "sil14VitrineBundle:Commande:show" }
+
+commande_new:
+    pattern:  /new
+    defaults: { _controller: "sil14VitrineBundle:Commande:new" }
+
+commande_create:
+    pattern:  /create
+    defaults: { _controller: "sil14VitrineBundle:Commande:create" }
+    requirements: { _method: post }
+
+commande_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "sil14VitrineBundle:Commande:edit" }
+
+commande_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "sil14VitrineBundle:Commande:update" }
+    requirements: { _method: post|put }
+
+commande_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "sil14VitrineBundle:Commande:delete" }
+    requirements: { _method: post|delete }

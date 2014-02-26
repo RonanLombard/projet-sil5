@@ -1,0 +1,32 @@
+{% extends "sil14VitrineBundle::layout.html.twig" %}
+
+{% block content %}
+
+        {% if error %}
+            <div>{{ error.message }}</div>
+	{% endif %}
+        <form class="form-inline" action="{{ path('auth_check') }}" method="post">
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label class="sr-only" for="username">Login :</label>
+                    <input type="text" class="form-control" id="username" name="_username" value="{{ last_username }}" />
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="sr-only" for="password">Mot de passe :</label>
+                    <input type="password" class="form-control" id="password" name="_password" />
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="hidden" name="_target_path" value="/accueil" />
+            </div>
+            <button type="submit" class="btn btn-primary">Se connecter</button>
+	</form>
+    
+
+
+
+{#render(controller('sil14VitrineBundle:Client:new'))#}
+  
+
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{# src/sil14/VitrineBundle/Resources/views/Default/layout.html.twig #}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Administration</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="{{ asset('bundles/sil14vitrine/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('bundles/sil14vitrine/css/style.css') }}" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <header>
+            <ul class="nav nav-tabs nav-justified">
+                <li><a href="{{ path('sil14_vitrine_backOffice') }}">Index</a></li>
+                <li><a href="{{ path('sil14_vitrine_client') }}">Utilisateurs</a></li>
+                <li><a href="{{ path('sil14_vitrine_product') }}">Produits</a></li>
+                <li><a href="{{ path('sil14_vitrine_category') }}">Categories</a></li>
+                <li><a href="{{ path('sil14_vitrine_commande') }}">Commande</a></li>
+                <li><a href="{{ path('sil14_vitrine_homepage') }}"><span class="glyphicon glyphicon-home"></span></a></li>
+            </ul>
+        </header>
+        
+        <div class="content">
+            <div class="symfony-content">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>        
+        {% include "sil14VitrineBundle::footer.html.twig" %}
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <link href="{{ asset('bundles/sil14vitrine/js/bootstrap.min.js') }}" rel="stylesheet" type="text/css" />
+    </body>
+</html>
+

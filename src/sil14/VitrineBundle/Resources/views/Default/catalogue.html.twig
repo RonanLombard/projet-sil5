@@ -1,0 +1,20 @@
+{# src/sil14/VitrineBundle/Resources/views/Default/catalogue.html.twig #}
+{% extends "sil14VitrineBundle::layout.html.twig" %}
+
+{% block content %}
+<h1>Catalogue</h1>  
+    <div class="row">
+    {% for item in categories %}
+        <a href="{{ path('sil14_vitrine_produitCat', { 'idcat': item.id }) }}">
+            <div class="col-sm-6 col-md-4 vignette">
+                <div class="thumbnail">
+                    <div class="caption">
+                        <h3>{{ item.name }}</h3>
+                    </div>
+                    <img src="{{ asset('bundles/sil14vitrine/images/cat'~item.id~'.png') }}" alt="{{ item.name }}">
+                </div>  
+            </div>
+        </a>
+     {% endfor %}
+    </div>    
+{% endblock %}

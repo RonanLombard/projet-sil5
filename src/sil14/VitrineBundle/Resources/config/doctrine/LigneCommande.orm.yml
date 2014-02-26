@@ -1,0 +1,27 @@
+## YAML Template.
+# src/sil14/VitrineBundle/Resources/config/doctrine/LigneCommande.orm.yml
+sil14\VitrineBundle\Entity\LigneCommande:
+    type: entity
+    table: ligneCommande
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        quantite:
+            type: integer
+        prix:
+            type: integer
+    manyToOne:
+        commande:
+            targetEntity: Commande
+            inversedBy: ligneCommandes
+            joinColumn:
+                name: commande_id
+                referencedColumnName: id
+        product:
+            targetEntity: Product
+            inversedBy: ligneCommandes
+            joinColumn:
+                name: product_id
+                referencedColumnName: id

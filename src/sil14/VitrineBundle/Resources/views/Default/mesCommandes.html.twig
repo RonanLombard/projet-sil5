@@ -1,0 +1,30 @@
+{% extends "sil14VitrineBundle::layout.html.twig" %}
+
+{% block content %}
+
+    {% block body %}
+        
+           
+                <table class="records_list">
+                    <thead>
+                        <tr>
+                            <th>Référence</th>
+                            <th>Date de la commande</th>
+                            <th>Validated</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for entity in entities %}
+                        <td>{{ entity.id }}</td>
+                        <td>{{ entity.date|date('d-m-Y') }}</td>
+                        <td>{{ entity.etat }}</td>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                
+
+
+    {% endblock %}
+
+{% endblock %}

@@ -1,0 +1,63 @@
+{# src/sil14/VitrineBundle/Resources/views/Default/layout.html.twig #}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>e-Vend</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="{{ asset('bundles/sil14vitrine/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('bundles/sil14vitrine/css/style.css') }}" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <header class="navbar navbar-static-top bs-docs-nav" role="banner">
+          <div class="container">
+            <div class="navbar-header">
+              <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a href="{{ path('sil14_vitrine_homepage') }}" class="navbar-brand"><img src="{{ asset('bundles/sil14vitrine/images/naincouleur.png') }}" alt="logo" width="25"> e-Vend</a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+              <ul class="nav navbar-nav">
+                <li>
+                  <a href="{{ path('sil14_vitrine_catalogue') }}">Catalogue</a>
+                </li>
+                <li class="active">
+                  <a href="{{ path('sil14_vitrine_mentions') }}">Mentions</a>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="{{ path('sil14_vitrine_contenuPanier') }}"><span class="glyphicon glyphicon-shopping-cart"></span> Panier</a></li>
+                
+                {% if is_granted('ROLE_USER') %}
+                    <li><a href="{{ path('sil14_vitrine_mesCommandes') }}"><span class="glyphicon glyphicon-check"></span> Commandes</a></li>
+                {% endif %}
+                
+                {% if is_granted('ROLE_ADMIN') %}
+                    <li><a href="{{ path('sil14_vitrine_backOffice') }}"><span class="glyphicon glyphicon-cog"></span> Admin</a></li>
+                {% endif %}
+                    
+                {% if (is_granted('ROLE_USER')) %}
+                    <li><a href="{{ path('logout') }}"><span class="glyphicon glyphicon-log-out"></span> Déconnexion</a></li>
+                {% else %}
+                    <li><a href="{{ path('sil14_vitrine_auth') }}"><span class="glyphicon glyphicon-log-in"></span> Connexion</a></li>
+                {% endif %}
+              </ul>
+            </nav>
+          </div>
+        </header>
+        <div class="content">
+
+            <div class="symfony-content">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>        
+        {% include "sil14VitrineBundle::footer.html.twig" %}
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <link href="{{ asset('bundles/sil14vitrine/js/bootstrap.min.js') }}" rel="stylesheet" type="text/css" />
+    </body>
+</html>
+

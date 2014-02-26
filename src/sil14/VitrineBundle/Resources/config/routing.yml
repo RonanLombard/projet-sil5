@@ -1,0 +1,93 @@
+sil14_vitrine_homepage:
+    pattern:  /accueil/{name}
+    defaults: { _controller: sil14VitrineBundle:Default:index, name:visiteur }
+
+sil14_vitrine_mentions:
+    pattern:  /mentions
+    defaults: { _controller: sil14VitrineBundle:Default:mentions }
+    
+sil14_vitrine_catalogue:
+    pattern:  /catalogue
+    defaults: { _controller: sil14VitrineBundle:Default:catalogue }
+    
+sil14_vitrine_produitCat:
+    pattern:  /produitCat/{idcat}
+    defaults: { _controller: sil14VitrineBundle:Default:produitCat, idcat:listprod}
+    
+sil14_vitrine_produit:
+    pattern:  /produit/{idprod}
+    defaults: { _controller: sil14VitrineBundle:Default:produit, idprod:id}
+
+sil14_vitrine_contenuPanier:
+    pattern:  /contenuPanier
+    defaults: { _controller: sil14VitrineBundle:Panier:contenuPanier }
+    
+sil14_vitrine_addPanier:
+    pattern:  /addPanier/{id}/{nb}
+    defaults: { _controller: sil14VitrineBundle:Panier:addPanier, id: null, nb: 1 }
+    
+sil14_vitrine_delPanier:
+    pattern:  /delPanier/{id}/{nb}
+    defaults: { _controller: sil14VitrineBundle:Panier:delPanier, id: null, nb: 1 }
+
+sil14_vitrine_remPanier:
+    pattern:  /remPanier/{id}
+    defaults: { _controller: sil14VitrineBundle:Panier:remPanier, id: null }
+    
+sil14_vitrine_validationPanier:
+    pattern:  /validationPanier
+    defaults: { _controller: sil14VitrineBundle:Panier:validationPanier }
+    
+sil14_vitrine_backOffice:
+    pattern:  /backOffice
+    defaults: { _controller: sil14VitrineBundle:Admin:adminAccueil }
+    
+sil14_vitrine_client:
+    pattern:  /client
+    defaults: { _controller: sil14VitrineBundle:Client:index }
+        
+sil14_vitrine_product:
+    pattern:  /product
+    defaults: { _controller: sil14VitrineBundle:Product:index }
+
+sil14_vitrine_category:
+    pattern:  /category
+    defaults: { _controller: sil14VitrineBundle:Category:index }
+    
+sil14_vitrine_commande:
+    pattern:  /commande
+    defaults: { _controller: sil14VitrineBundle:Commande:index }
+
+sil14_vitrine_auth:
+    pattern:  /auth
+    defaults: { _controller: sil14VitrineBundle:Security:login }
+
+sil14_vitrine_mesCommandes:
+    pattern:  /mesCommandes
+    defaults: { _controller: sil14VitrineBundle:Default:mesCommandes }
+
+sil14VitrineBundle_client:
+    resource: "@sil14VitrineBundle/Resources/config/routing/client.yml"
+    prefix:   /client
+
+sil14VitrineBundle_commande:
+    resource: "@sil14VitrineBundle/Resources/config/routing/commande.yml"
+    prefix:   /commande
+    
+sil14VitrineBundle_product:
+    resource: "@sil14VitrineBundle/Resources/config/routing/product.yml"
+    prefix:   /product
+    
+sil14VitrineBundle_category:
+    resource: "@sil14VitrineBundle/Resources/config/routing/category.yml"
+    prefix:   /category
+
+sil14VitrineBundle_commande:
+    resource: "@sil14VitrineBundle/Resources/config/routing/commande.yml"
+    prefix:   /commande
+      
+auth_check:
+    pattern: /auth_check
+
+logout:
+    pattern: /logout

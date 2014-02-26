@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/wamp/www/Symfony/src/sil14/VitrineBundle/Entity/LigneCommande.php</file>
+            <file>file:/C:/wamp/www/Symfony/src/sil14/VitrineBundle/Resources/config/doctrine/Commande.orm.yml</file>
+            <file>file:/C:/wamp/www/Symfony/src/sil14/VitrineBundle/Entity/Commande.php</file>
+            <file>file:/C:/wamp/www/Symfony/src/sil14/VitrineBundle/Entity/Product.php</file>
+            <file>file:/C:/wamp/www/Symfony/src/sil14/VitrineBundle/Form/ClientType.php</file>
+            <file>file:/C:/wamp/www/Symfony/app/config/security.yml</file>
+            <file>file:/C:/wamp/www/Symfony/src/sil14/VitrineBundle/Resources/views/Default/mesCommandes.html.twig</file>
+            <file>file:/C:/wamp/www/Symfony/src/sil14/VitrineBundle/Resources/views/Commande/index.html.twig</file>
+            <file>file:/C:/wamp/www/Symfony/src/sil14/VitrineBundle/Controller/ProductController.php</file>
+            <file>file:/C:/wamp/www/Symfony/src/sil14/VitrineBundle/Entity/Client.php</file>
+            <file>file:/C:/wamp/www/Symfony/src/sil14/VitrineBundle/Resources/config/doctrine/Client.orm.yml</file>
+            <file>file:/C:/wamp/www/Symfony/src/sil14/VitrineBundle/Controller/CommandeController.php</file>
+            <file>file:/C:/wamp/www/Symfony/src/sil14/VitrineBundle/Resources/views/header.html.twig</file>
+            <file>file:/C:/wamp/www/Symfony/src/sil14/VitrineBundle/Resources/views/layout.html.twig</file>
+            <file>file:/C:/wamp/www/Symfony/src/sil14/VitrineBundle/Resources/views/Commande/show.html.twig</file>
+            <file>file:/C:/wamp/www/Symfony/src/sil14/VitrineBundle/Resources/views/Client/new.html.twig</file>
+            <file>file:/C:/wamp/www/Symfony/src/sil14/VitrineBundle/Controller/SecurityController.php</file>
+            <file>file:/C:/wamp/www/Symfony/src/sil14/VitrineBundle/Controller/DefaultController.php</file>
+            <file>file:/C:/wamp/www/Symfony/src/sil14/VitrineBundle/Controller/ClientController.php</file>
+            <file>file:/C:/wamp/www/Symfony/src/sil14/VitrineBundle/Resources/config/routing.yml</file>
+        </group>
+    </open-files>
+</project-private>

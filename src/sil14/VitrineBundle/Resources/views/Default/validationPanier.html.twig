@@ -1,0 +1,21 @@
+{% extends "sil14VitrineBundle::layout.html.twig" %}
+
+{% block content %}
+    <h1>Récapitulatif de votre commande</h1>
+    <table class="clPanier">
+        <tr>
+            <th></th>
+            <th>Prix</th>
+            <th>Quantité</th>
+        </tr>
+        {% for item in panier %}
+            <tr>
+                <td>{{ item.product.name }}</td>
+                <td>{{ item.product.price }} €</td>
+                <td>{{ item.qte }}</td>
+            </tr>
+        {% endfor %}
+
+    </table>
+    <p>Montant total de votre commande du <b>{{ commande.date|date('d-m-Y') }}</b> n° <b>{{ commande.id }}</b> : <b>{{ prixtotal }}€</b></p>
+{% endblock %}

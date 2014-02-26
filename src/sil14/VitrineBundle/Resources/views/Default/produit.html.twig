@@ -1,0 +1,38 @@
+{# src/sil14/VitrineBundle/Resources/views/Default/produit.html.twig #}
+{% extends "sil14VitrineBundle::layout.html.twig" %}
+
+{% block content %}
+    <div>
+       <a href="{{ path('sil14_vitrine_produitCat', { 'idcat': produit.category.id }) }}"><- Retour</a>
+    </div>
+    <h1>{{ produit.name }}</h1>
+    
+    <div class="prodrender">
+        <div class="prod prod_left" >
+            <img src="{{ asset('bundles/sil14vitrine/images/'~produit.id~'.png') }}" alt="{{ produit.name }}">
+        </div>
+        <div class="prod_right">
+            <table>
+                <tr>
+                    <th>Prix : </th>
+                    <td>{{ produit.price }} €</td>
+                </tr>
+                <tr>
+                    <th>Description : </th>
+                    <td><div class="prod_desc">{{ produit.description }}</div></td>
+                </tr>
+                <tr>
+                    <td><div>Il reste {{ produit.stock }} articles</div></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <a href="{{ path('sil14_vitrine_addPanier', { 'id': produit.id, 'nb': 1}) }}" type="button" class="btn btn-primary"> Ajouter au panier </a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+{% endblock %}

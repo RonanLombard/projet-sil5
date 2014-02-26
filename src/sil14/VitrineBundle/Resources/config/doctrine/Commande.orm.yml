@@ -1,0 +1,26 @@
+## YAML Template.
+# src/sil14/VitrineBundle/Resources/config/doctrine/Commande.orm.yml
+sil14\VitrineBundle\Entity\Commande:
+    type: entity
+    table: commande
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        date:
+            type: date
+        etat:
+            type: string
+            size: 5
+    manyToOne:
+        client:
+            targetEntity: Client
+            inversedBy: commandes
+            joinColumn:
+                name: client_id
+                referencedColumnName: id
+    oneToMany:
+            ligneCommandes:
+                targetEntity: LigneCommande
+                mappedBy: commande

@@ -1,0 +1,22 @@
+{# src/sil14/VitrineBundle/Resources/views/Default/produit.html.twig #}
+{% extends "sil14VitrineBundle::layout.html.twig" %}
+
+{% block content %}
+<h1>Panier</h1>
+<table class="clPanier">
+    <tr>
+        <th></th>
+        <th>Prix</th>
+        <th>Quantité</th>
+    </tr>
+    {% for item in panier %}
+        <tr>
+            <td>{{ item.product.name }}</td>
+            <td>{{ item.product.price }} €</td>
+            <td><a href="{{ path('sil14_vitrine_delPanier', { 'id': item.product.id, 'nb': 1}) }}" class="btn">-</a>{{ item.qte }}<a href="{{ path('sil14_vitrine_addPanier', { 'id': item.product.id, 'nb': 1}) }}" class="btn">+</a></td>
+            <td><a href="{{ path('sil14_vitrine_remPanier', { 'id': item.product.id, 'nb': 1}) }}" class="btn"><span class="glyphicon glyphicon-trash"></span></a>
+        </tr>
+    {% endfor %}
+</table>
+<a href="{{ path('sil14_vitrine_validationPanier')}}" class="btn btn-primary">Passer la commande</a>
+{% endblock %}

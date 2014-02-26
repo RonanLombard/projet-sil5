@@ -1,0 +1,30 @@
+category:
+    pattern:  /
+    defaults: { _controller: "sil14VitrineBundle:Category:index" }
+
+category_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "sil14VitrineBundle:Category:show" }
+
+category_new:
+    pattern:  /new
+    defaults: { _controller: "sil14VitrineBundle:Category:new" }
+
+category_create:
+    pattern:  /create
+    defaults: { _controller: "sil14VitrineBundle:Category:create" }
+    requirements: { _method: post }
+
+category_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "sil14VitrineBundle:Category:edit" }
+
+category_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "sil14VitrineBundle:Category:update" }
+    requirements: { _method: post|put }
+
+category_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "sil14VitrineBundle:Category:delete" }
+    requirements: { _method: post|delete }

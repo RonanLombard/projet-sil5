@@ -1,0 +1,31 @@
+## YAML Template.
+# src/sil14/VitrineBundle/Resources/config/doctrine/Product.orm.yml
+sil14\VitrineBundle\Entity\Product:
+    type: entity
+    table: product
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        name:
+            type: string
+            length: 100
+        price:
+            type: decimal
+            scale: 2
+        description:
+            type: text
+        stock:
+            type: integer
+    manyToOne:
+        category:
+            targetEntity: Category
+            inversedBy: products
+            joinColumn:
+                name: category_id
+                referencedColumnName: id
+    oneToMany:
+            ligneCommandes:
+                targetEntity: LigneCommande
+                mappedBy: commande
